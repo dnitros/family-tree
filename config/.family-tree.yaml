@@ -1,0 +1,11 @@
+tree:
+  connect:
+    son:
+      mary ann:
+        - John Doe
+  person:
+    - Mary Ann
+    - John Doe
+  relationship:
+    - father
+    - son
