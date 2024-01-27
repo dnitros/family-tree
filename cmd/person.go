@@ -20,7 +20,7 @@ For example:
 			if err := cmd.Help(); err != nil {
 				cobra.CheckErr(err)
 			}
-			fmt.Println("No arguments passed")
+			fmt.Println("\nNo arguments passed")
 			fmt.Println("family-tree add person <name>")
 			return
 		}

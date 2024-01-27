@@ -17,6 +17,14 @@ Mandatory usage of in below format:
 For example:
 	family tree connect John Doe as son of Mary Ann.`,
 	Run: func(cmd *cobra.Command, args []string) {
+		if len(args) == 0 {
+			if err := cmd.Help(); err != nil {
+				cobra.CheckErr(err)
+			}
+			fmt.Println("\nNo arguments passed")
+			fmt.Println("family-tree connect <person1> as <relationship> of <person2>")
+			return
+		}
 		connectionString := strings.Join(args, " ")
 		asIndex := strings.Index(connectionString, " as ")
 		ofIndex := strings.Index(connectionString, " of ")
@@ -50,7 +58,7 @@ func extractConnectArgs(connectionString string) (leftName, relationship, rightN
 }
 
 func addConnection(leftName, relationship, rightName string) {
-	key := "tree.connect." + relationship + "." + rightName
+	key := fmt.Sprintf("tree.connect.%s.%s", relationship, strings.ToLower(rightName))
 	connects := viper.GetStringSlice(key)
 	for _, connect := range connects {
 		if leftName == connect {

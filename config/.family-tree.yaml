@@ -1,11 +1,171 @@
 tree:
-  connect:
-    son:
-      mary ann:
-        - John Doe
-  person:
-    - Mary Ann
-    - John Doe
-  relationship:
-    - father
-    - son
+    connect:
+        daughter:
+            anne hathaway:
+                - Susanna
+                - Judith
+            john hall:
+                - Elizabeth
+            john shakespeare:
+                - Joan
+                - Margaret
+                - Anne
+            mary arden:
+                - Joan
+                - Margaret
+                - Anne
+            susanna:
+                - Elizabeth
+            william:
+                - Susanna
+                - Judith
+        daughter in law:
+            john shakespeare:
+                - Anne Hathaway
+            mary arden:
+                - Anne Hathaway
+        father:
+            anne:
+                - John Shakespeare
+            edmund:
+                - John Shakespeare
+            elizabeth:
+                - John Hall
+            gilbert:
+                - John Shakespeare
+            hamnet:
+                - William
+            joan:
+                - John Shakespeare
+            judith:
+                - William
+            margaret:
+                - John Shakespeare
+            richard:
+                - John Shakespeare
+                - Thomas Quiney
+            shakespeare:
+                - Thomas Quiney
+            susanna:
+                - William
+            thomas:
+                - Thomas Quiney
+            william:
+                - John Shakespeare
+        father in law:
+            anne hathaway:
+                - John Shakespeare
+            john hall:
+                - William
+            thomas quiney:
+                - William
+        husband:
+            anne hathaway:
+                - William
+            mary arden:
+                - John Shakespeare
+            susanna:
+                - John Hall
+        mother:
+            anne:
+                - Mary Arden
+            edmund:
+                - Mary Arden
+            elizabeth:
+                - Susanna
+            gilbert:
+                - Mary Arden
+            hamnet:
+                - Anne Hathaway
+            joan:
+                - Mary Arden
+            judith:
+                - Anne Hathaway
+            margaret:
+                - Mary Arden
+            richard:
+                - Mary Arden
+                - Judith
+            shakespeare:
+                - Judith
+            susanna:
+                - Anne Hathaway
+            thomas:
+                - Judith
+            william:
+                - Mary Arden
+        mother in law:
+            anne hathaway:
+                - Mary Arden
+            john hall:
+                - Anne Hathaway
+            thomas quiney:
+                - Anne Hathaway
+        son:
+            anne hathaway:
+                - Hamnet
+            john shakespeare:
+                - Gilbert
+                - Richard
+                - Edmund
+                - William
+            judith:
+                - Shakespeare
+                - Richard
+                - Thomas
+            mary arden:
+                - Gilbert
+                - Richard
+                - Edmund
+                - William
+            thomas quiney:
+                - Shakespeare
+                - Richard
+                - Thomas
+            william:
+                - Hamnet
+        son in law:
+            anne hathaway:
+                - John Hall
+                - Thomas Quiney
+            william:
+                - John Hall
+                - Thomas Quiney
+        wife:
+            john hall:
+                - Susanna
+            john shakespeare:
+                - Mary Arden
+            william:
+                - Anne Hathaway
+    person:
+        - John Shakespeare
+        - Mary Arden
+        - John
+        - Margaret
+        - Gilbert
+        - Joan
+        - Anne
+        - Richard
+        - Edmund
+        - William
+        - Anne Hathaway
+        - Susanna
+        - John Hall
+        - Hamnet
+        - Judith
+        - Thomas Quiney
+        - Elizabeth
+        - Shakespeare
+        - Thomas
+    relationship:
+        - husband
+        - wife
+        - son
+        - daughter
+        - father
+        - mother
+        - daughter in law
+        - son in law
+        - mother in law
+        - father in law

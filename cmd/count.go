@@ -16,19 +16,28 @@ For example:
 	family-tree count daughters of John Doe
 	family-tree count wives of John Doe`,
 	Run: func(cmd *cobra.Command, args []string) {
+		if len(args) == 0 {
+			if err := cmd.Help(); err != nil {
+				cobra.CheckErr(err)
+			}
+			fmt.Println("\nNo arguments passed")
+			fmt.Println("family-tree count <relationship-in-plural> of <person>")
+			return
+		}
+
 		if len(args) < 3 || args[1] != "of" {
 			if err := cmd.Help(); err != nil {
 				cobra.CheckErr(err)
 			}
 			fmt.Println("Invalid arguments for count passed")
 			fmt.Println("Mandatory usage:")
-			fmt.Println("family-tree count <relationship in plural> of <person>")
+			fmt.Println("family-tree count <relationship-in-plural> of <person>")
 			return
 		}
 
 		relationship, person := extractCountArgs(args)
 		relationship = singularRelationship(relationship)
-		key := "tree.connect." + relationship + "." + strings.ToLower(person)
+		key := fmt.Sprintf("tree.connect.%s.%s", relationship, strings.ToLower(person))
 		fmt.Println(len(viper.GetStringSlice(key)))
 	},
 }

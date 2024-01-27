@@ -12,12 +12,12 @@ var clearCmd = &cobra.Command{
 	Short: "Clear the config file content",
 	Long:  `Clear the config file content`,
 	Run: func(cmd *cobra.Command, args []string) {
-		configfile := viper.ConfigFileUsed()
-		if err := os.Remove(configfile); err != nil {
+		cfgFile := viper.ConfigFileUsed()
+		if err := os.Remove(cfgFile); err != nil {
 			fmt.Println(err)
 			os.Exit(1)
 		}
-		if _, err := os.OpenFile(configfile, os.O_RDONLY|os.O_CREATE, 0666); err != nil {
+		if _, err := os.OpenFile(cfgFile, os.O_RDONLY|os.O_CREATE, 0666); err != nil {
 			fmt.Println(err)
 			os.Exit(1)
 		}
