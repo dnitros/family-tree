@@ -2,10 +2,11 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/im-digvijay/family-tree/utils"
+	"strings"
+
+	"github.com/dnitros/family-tree/utils"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
-	"strings"
 )
 
 var connectCmd = &cobra.Command{

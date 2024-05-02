@@ -1,4 +1,4 @@
-module github.com/im-digvijay/family-tree
+module github.com/dnitros/family-tree
 
 go 1.21.6
 

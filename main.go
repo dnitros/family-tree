@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/im-digvijay/family-tree/cmd"
+import "github.com/dnitros/family-tree/cmd"
 
 func main() {
 	cmd.Execute()
